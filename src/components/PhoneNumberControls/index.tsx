@@ -31,7 +31,7 @@ const PhoneNumberControl: React.FC = () => {
   };
 
   useEffect(() => {
-    setDuplicatedIdx(-1);
+    setDuplicatedIdx(-2);
     setNewNumber(validate(newNumber.replaceAll(/\D/g, '')));
   }, [newNumber, setNewNumber, setDuplicatedIdx]);
 

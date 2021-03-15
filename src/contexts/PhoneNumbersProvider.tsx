@@ -38,6 +38,7 @@ const PhoneNumbersProvider: React.FC = props => {
 
   const removeNumber: (_: PhoneNumber) => void = phoneNumber => {
     setNumbers(numbers.filter(item => item !== phoneNumber));
+    setDuplicatedIdx(-2);
   };
 
   const reOrder: (src: number, dst: number) => void = (src, dst) => {

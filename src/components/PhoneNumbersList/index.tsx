@@ -15,11 +15,14 @@ const PhoneNumbersList: React.FC = () => {
         0,
         (duplicatedIdx * listElem.scrollHeight) / numbers.length,
       );
+    } else if (duplicatedIdx === -1) {
+      listElem?.scrollTo(0, 0);
     }
   }, [listElem, duplicatedIdx, numbers.length]);
 
   const onDragEnd = useCallback(
     result => {
+      console.log(result);
       if (!result.destination) {
         return;
       }
